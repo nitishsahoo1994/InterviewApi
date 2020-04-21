@@ -46,3 +46,14 @@ class Test(unittest.TestCase):
             elif id == 800:
                 assert resp['list'][i]['weather'][0]['description'] == 'clear sky'
 
+
+
+    def test_print_all_time(self):
+            response = requests.get(BASE_URI, )
+            resp = response.json()
+            cnt = resp['cnt']
+            for i in range(0, cnt - 1):
+                dt_time = resp['list'][i]['dt_txt']
+                mylst = dt_time.split()
+                print((mylst[1].split(":"))[0])
+
