@@ -34,7 +34,7 @@ class Test(unittest.TestCase):
             assert act_temp <= temp_max
 
 
-    def test_temp_diff(self):
+    def test_check_weather(self):
         response = requests.get(BASE_URI, )
         resp = response.json()
         cnt = resp['cnt']
